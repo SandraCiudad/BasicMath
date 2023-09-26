@@ -18,9 +18,9 @@ pipeline {
                 echo 'FINISHING...'
             }
         }
-        post {
-            always {
-                junit '**/reports/junit/*.xml'
+        stage('Publish test results') {
+            steps {
+                junit '**/test-results/test/*.xml'
             }
         } 
     }
