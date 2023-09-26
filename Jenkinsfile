@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'make';
                 echo 'Building..'
+                sh 'make';
             }
         }
         stage('Test') {
@@ -18,5 +18,10 @@ pipeline {
                 echo 'FINISHING...'
             }
         }
+        post {
+            always {
+                junit '**/reports/junit/*.xml'
+            }
+        } 
     }
 }
