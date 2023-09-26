@@ -11,16 +11,18 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'xsltproc -o junitTestBasicMathResults.xml cpp2junit.xslt cppTestBasicMathResults.xml';
             }
         }
         stage('Finish') {
             steps {
                 echo 'FINISHING...'
-                sh 'xsltproc -o junitTestBasicMathResults.xml cpp2junit.xslt cppTestBasicMathResults.xml';
+                
             }
         }
         stage('Publish test results') {
             steps {
+                sh 'make check || true'
                 junit 'junitTestBasicMathResults.xml'
             }
         } 
