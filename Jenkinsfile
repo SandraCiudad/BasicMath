@@ -21,7 +21,6 @@ pipeline {
         } 
         stage('Code coverage data') {
             steps {
-                gcovr
             }
         } 
     }
