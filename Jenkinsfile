@@ -19,9 +19,5 @@ pipeline {
                 junit 'junitTestBasicMathResults.xml'
             }
         } 
-        stage('Code coverage data') {
-            steps {
-            }
-        } 
     }
 }
