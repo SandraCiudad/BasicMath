@@ -1,4 +1,7 @@
 
 all:
-	g++ -o testBasicMath CBasicMath.cpp TestBasicMath.cpp -lcppunit 
+	#program compilation
+	g++ -o testBasicMath CBasicMath.cpp TestBasicMath.cpp -lcppunit --coverage
+
+	#memory leaks detection
 	valgrind ./testBasicMath
