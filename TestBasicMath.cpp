@@ -41,7 +41,7 @@ private:
 
 void TestBasicMath::testAddition(void)
 {
-    CPPUNIT_ASSERT(5 == mTestObj->Addition(2,1));
+    CPPUNIT_ASSERT(3 == mTestObj->Addition(2,1));
 }
 
 
