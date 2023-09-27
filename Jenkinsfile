@@ -14,15 +14,14 @@ pipeline {
                 sh 'xsltproc -o junitTestBasicMathResults.xml cpp2junit.xslt cppTestBasicMathResults.xml';
             }
         }
-        stage('Finish') {
-            steps {
-                echo 'FINISHING...'
-                
-            }
-        }
         stage('Publish test results') {
             steps {
                 junit 'junitTestBasicMathResults.xml'
+            }
+        } 
+        stage('Code coverage data') {
+            steps {
+                gcovr
             }
         } 
     }
