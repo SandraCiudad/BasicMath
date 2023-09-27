@@ -24,8 +24,7 @@ pipeline {
                 reportFiles: 'coverage.html', 
                 reportName: 'Code Coverage Report', 
                 reportTitles: 'Coverage Report'])
-            }
-            steps {
+
                 publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: false, 
                 keepAll: false, 
@@ -33,8 +32,7 @@ pipeline {
                 reportFiles: 'coverage.CBasicMath.cpp.html', 
                 reportName: 'Class CBasicMath Report', 
                 reportTitles: 'Coverage Report'])
-            }
-            steps {
+
                 publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: false, 
                 keepAll: false, 
