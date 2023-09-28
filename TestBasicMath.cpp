@@ -41,13 +41,13 @@ private:
 
 void TestBasicMath::testAddition(void)
 {
-    CPPUNIT_ASSERT(3 == mTestObj->Addition(2,1));
+    CPPUNIT_ASSERT(9 == mTestObj->Addition(2,1));
 }
 
 
 void TestBasicMath::testMultiply(void)
 {
-    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2,3));
+    CPPUNIT_ASSERT(5 == mTestObj->Multiply(2,3));
 }
 
 
