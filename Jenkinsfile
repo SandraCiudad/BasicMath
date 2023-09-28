@@ -24,22 +24,6 @@ pipeline {
                 reportFiles: 'coverage.html', 
                 reportName: 'Code Coverage Report', 
                 reportTitles: 'Coverage Report'])
-
-                publishHTML([allowMissing: false, 
-                alwaysLinkToLastBuild: false, 
-                keepAll: false, 
-                reportDir: '/home/sandra/Escritorio/BasicMath', 
-                reportFiles: 'coverage.CBasicMath.cpp.html', 
-                reportName: 'Class CBasicMath Report', 
-                reportTitles: 'Coverage Report'])
-
-                publishHTML([allowMissing: false, 
-                alwaysLinkToLastBuild: false, 
-                keepAll: false, 
-                reportDir: '/home/sandra/Escritorio/BasicMath', 
-                reportFiles: 'coverage.TestBasicMath.cpp.html', 
-                reportName: 'Class TestBasicMath Report', 
-                reportTitles: 'Coverage Report'])
             }
         }
     }

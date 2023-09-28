@@ -47,7 +47,7 @@ void TestBasicMath::testAddition(void)
 
 void TestBasicMath::testMultiply(void)
 {
-    CPPUNIT_ASSERT(5 == mTestObj->Multiply(2,3));
+    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2,3));
 }
 
 
